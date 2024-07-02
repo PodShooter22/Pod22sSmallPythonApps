@@ -1,0 +1,23 @@
+import random
+
+# Define the size of the grid
+rows = 32
+cols = 32
+
+# Loop over each row
+for i in range(rows):
+    # Start each row as an empty string
+    row = ""
+    # Loop over each column in the row
+    for j in range(cols):
+        # Generate the noise
+        noise = random.randint(-1, 1)
+        # Depending on the noise, add a different character to the row
+        if noise == -1:
+            row += "⬛"
+        elif noise == 0:
+            row += "🔲"
+        elif noise == 1:
+            row += "⬜"
+    # Print the row
+    print(row)
